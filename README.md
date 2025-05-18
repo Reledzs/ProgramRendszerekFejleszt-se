@@ -13,3 +13,9 @@ A client/src/index.html-t ng serve-el futtatni
 
 Server
 server/index.ts futtatása
+
+Admin felhasználó:
+admin@admin.com
+pw: asdasd
+user@user.com
+pw: asdasd
