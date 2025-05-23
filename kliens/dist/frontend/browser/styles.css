@@ -1,0 +1,13 @@
+/* src/styles.scss */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+app-root {
+  width: 100%;
+}
+
+/* angular:styles/global:styles */
+/*# sourceMappingURL=styles.css.map */

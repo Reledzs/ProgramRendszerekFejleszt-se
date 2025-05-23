@@ -1,0 +1,34 @@
+<h2 mat-dialog-title>{{title}}</h2>
+<div mat-dialog-content>
+  <br>
+  <mat-form-field>
+    <mat-label>Név</mat-label>
+    <input matInput [(ngModel)]="user.name">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="user.email">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Lakcím</mat-label>
+    <input matInput [(ngModel)]="user.address">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Felhasználó név</mat-label>
+    <input matInput [(ngModel)]="user.nickname">
+  </mat-form-field>
+  <br>
+  <mat-checkbox
+  [checked]="user.role === 'Admin'"
+  (change)="toggleAdmin($event.checked)">
+     {{user.role}}
+  </mat-checkbox>
+</div>
+  
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Mégse</button>
+  <button mat-raised-button color="primary" (click)="onSave()">Mentés</button>
+</div>

@@ -1,0 +1,47 @@
+<div class="car-detail-container" *ngIf="car">
+  <img [src]="'http://localhost:5000' + car.imagePath" alt="Autó képe" class="car-image" />
+
+  <div class="car-info">
+    <h2>{{ car.brand }} {{ car.car_model }}</h2>
+
+    <div class="detail-row"><span class="label">Évjárat:</span> {{ car.year }}</div>
+    <div class="detail-row"><span class="label">Ár/nap:</span> {{ car.price }} Ft</div>
+  </div>
+  <div class="extras-section">
+  <label>Választható extrák:</label>
+  <div *ngFor="let extra of extras">
+    <mat-checkbox 
+      (change)="toggleExtra(extra._id, $event.checked)">
+      {{ extra.name }} - {{extra.price}} Ft/nap
+    </mat-checkbox>
+  </div>
+  </div>
+  <mat-form-field appearance="fill">
+    <mat-label>Foglalási időszak</mat-label>
+    <mat-date-range-input 
+      [rangePicker]="picker"
+      [(ngModel)]="selectedRange"
+      [dateFilter]="myFilter"
+      [formGroup]="range"
+      [ngModelOptions]="{standalone: true}"
+    >
+      <input matStartDate formControlName="start" placeholder="Kezdő dátum" readonly>
+      <input matEndDate formControlName="end" placeholder="Végdátum" readonly>
+    </mat-date-range-input>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+  </mat-form-field>
+  <div class="total-price" *ngIf="totalPrice > 0">
+  <strong>Teljes ár:</strong> {{ totalPrice }} Ft
+  </div>
+  <button 
+  mat-raised-button 
+  color="primary"
+  class="booking-button"
+  (click)="OnBookingConfirmClick()"
+  [disabled]="disabled"
+>
+  Foglalás véglegesítése
+</button>
+</div>
+

@@ -1,0 +1,13 @@
+<div class="container">
+    <h1 class="title">Bérelhető autók</h1>
+  
+    <div class="car-grid">
+      <div class="car-card" *ngFor="let car of cars">
+        <h2 class="car-type">{{ car.car_model }}</h2>
+        <h2 class="car-name">{{ car.brand }}</h2>
+        <img [src]="'http://localhost:5000' + car.imagePath" alt="Kép" width="200">
+        <p class="car-price">{{ car.price }} Ft/nap</p>
+        <button mat-button class="car-button" (click)="viewDetails(car._id!)">Részletek</button>
+      </div>
+    </div>
+  </div>

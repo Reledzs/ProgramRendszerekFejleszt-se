@@ -1,0 +1,19 @@
+<header>
+    <nav class="navbar">
+      <div class="logo">Autóbérlés</div>
+      <ul class="nav-links">
+        <li *ngIf="(isLoggedIn$ | async)"><a routerLink="/cars">Autók</a></li>
+        <li *ngIf="(isLoggedIn$ | async)"><a routerLink="/mybookings">Foglalásaim</a></li>
+        
+        <!-- Admin opciók csak adminoknak -->
+        <li *ngIf="(isLoggedIn$ && isAdmin$ | async)"><a [routerLink]="['/admin/user-management']" routerLinkActive="active">Felhasználók kezelése</a></li>
+        <li *ngIf="(isAdmin$ | async)"><a [routerLink]="['/admin/car-management']" routerLinkActive="active">Autók kezelése</a></li>
+        <li *ngIf="(isAdmin$ | async)"><a [routerLink]="['/admin/booking-management']">Foglalások kezelése</a></li>
+        <li *ngIf="(isAdmin$ | async)"><a [routerLink]="['/admin/extra-management']">Extrák kezelése</a></li>
+        <li *ngIf="(isLoggedIn$ | async)"><button mat-icon-button color="warn" (click)="logout()" aria-label="Kijelentkezés">
+          <mat-icon>logout</mat-icon></button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  

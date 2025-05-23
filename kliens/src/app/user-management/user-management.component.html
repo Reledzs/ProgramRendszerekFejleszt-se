@@ -1,0 +1,56 @@
+<div class="table-container">
+    <table mat-table [dataSource]="users" class="mat-elevation-z8">
+  
+      <!-- Email oszlop -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email cím </th>
+        <td mat-cell *matCellDef="let user"> {{ user.email }} </td>
+      </ng-container>
+  
+      <!-- Név oszlop -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Név </th>
+        <td mat-cell *matCellDef="let user"> {{ user.name }} </td>
+      </ng-container>
+  
+      <!-- Cím oszlop -->
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef> Lakcím </th>
+        <td mat-cell *matCellDef="let user"> {{ user.address }} </td>
+      </ng-container>
+  
+      <!-- Becenév oszlop -->
+      <ng-container matColumnDef="nickname">
+        <th mat-header-cell *matHeaderCellDef> Felhasználó név</th>
+        <td mat-cell *matCellDef="let user"> {{ user.nickname }} </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="role">
+        <th mat-header-cell *matHeaderCellDef> Szerep </th>
+        <td mat-cell *matCellDef="let user"> {{ user.role }} </td>
+      </ng-container>
+
+      <!-- Műveletek oszlop -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Műveletek </th>
+        <td mat-cell *matCellDef="let user">
+          <button mat-icon-button color="primary" (click)="editUser(user)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deleteUser(user)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+    </table>
+  </div>
+  
+  <!-- Üres állapot -->
+  <ng-template #noUsersTemplate>
+    <p>No users available.</p>
+  </ng-template>
+  

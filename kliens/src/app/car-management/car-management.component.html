@@ -1,0 +1,66 @@
+<div class="table-container">
+    <div class="table-header">
+        <h2>Autók kezelése</h2>
+        <button mat-raised-button color="primary" (click)="openAddCarDialog()">
+          <mat-icon>add</mat-icon> Új autó hozzáadása
+        </button>
+    </div>  
+    <table mat-table [dataSource]="cars" class="mat-elevation-z8">
+  
+      <!-- Email oszlop -->
+      <ng-container matColumnDef="imagePath">
+        <th mat-header-cell *matHeaderCellDef> Image </th>
+        <td mat-cell *matCellDef="let car">
+          <img [src]="'http://localhost:5000' + car.imagePath" alt="Kép" width="200">
+        </td>
+      </ng-container>
+      <!-- Email oszlop -->
+      
+      <ng-container matColumnDef="brand">
+        <th mat-header-cell *matHeaderCellDef>  Brand </th>
+        <td mat-cell *matCellDef="let car">
+            {{car.brand}}
+        </td>
+      </ng-container>
+      <!-- Név oszlop -->
+      <ng-container matColumnDef="model">
+        <th mat-header-cell *matHeaderCellDef> Model </th>
+        <td mat-cell *matCellDef="let car"> {{ car.car_model }} </td>
+      </ng-container>
+  
+      <!-- Cím oszlop -->
+      <ng-container matColumnDef="year">
+        <th mat-header-cell *matHeaderCellDef> Year </th>
+        <td mat-cell *matCellDef="let car"> {{ car.year }} </td>
+      </ng-container>
+  
+      <!-- Becenév oszlop -->
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef> Price/day </th>
+        <td mat-cell *matCellDef="let car"> {{ car.price }} </td>
+      </ng-container>
+  
+      <!-- Műveletek oszlop -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let car">
+          <button mat-icon-button color="primary" (click)="editCar(car)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deleteCar(car)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+      
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+    </table>
+  </div>
+  
+  <!-- Üres állapot -->
+  <ng-template #noUsersTemplate>
+    <p>No users available.</p>
+  </ng-template>
+  

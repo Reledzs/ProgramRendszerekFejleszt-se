@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>{{title}}</h2>
+<div mat-dialog-content>
+  <br>
+  <mat-form-field>
+    <mat-label>Elnevezés</mat-label>
+    <input matInput [(ngModel)]="extra.name">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Ár/nap</mat-label>
+    <input matInput [(ngModel)]="extra.price">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Leírás</mat-label>
+    <input matInput [(ngModel)]="extra.details">
+  </mat-form-field>
+</div>
+  
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Mégse</button>
+  <button mat-raised-button color="primary" (click)="onSave()">Mentés</button>
+</div>

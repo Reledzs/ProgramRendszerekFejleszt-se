@@ -1,0 +1,83 @@
+<div class="table-container">
+  <div class="table-header">
+    <h2>Foglalások kezelése</h2>
+  </div>  
+
+  <ng-container>
+    <table mat-table [dataSource]="bookings" class="mat-elevation-z8">
+
+      <!-- Email oszlop -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Foglaló</th>
+        <td mat-cell *matCellDef="let booking">{{ booking.userEmail }}</td>
+      </ng-container>
+
+      <!-- Brand -->
+       <ng-container matColumnDef="model">
+        <th mat-header-cell *matHeaderCellDef>Modell</th>
+        <td mat-cell *matCellDef="let booking">{{ booking.carModel }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="brand">
+        <th mat-header-cell *matHeaderCellDef>Márka</th>
+        <td mat-cell *matCellDef="let booking">{{ booking.carBrand }}</td>
+      </ng-container>
+
+      <!-- Modell -->
+      <ng-container matColumnDef="extra" >
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Kért Extrák</th>
+        <td mat-cell *matCellDef="let booking">{{ booking.extras }}</td>
+      </ng-container>
+
+      <!-- Foglalási dátum -->
+      <ng-container matColumnDef="bookingDate">
+        <th mat-header-cell *matHeaderCellDef>Foglalás dátuma</th>
+        <td mat-cell *matCellDef="let booking">{{ booking.bookingDate | date:'short' }}</td>
+      </ng-container>
+
+      <!-- Kezdő dátum -->
+      <ng-container matColumnDef="startDate">
+        <th mat-header-cell *matHeaderCellDef>Foglalás kezdete</th>
+        <td mat-cell *matCellDef="let booking">{{ booking.startDate | date: 'yyyy.MM.dd'}}</td>
+      </ng-container>
+
+      <!-- Vég dátum -->
+      <ng-container matColumnDef="endDate">
+        <th mat-header-cell *matHeaderCellDef>Foglalás vége</th>
+        <td mat-cell *matCellDef="let booking">{{ booking.endDate | date:'yyyy.MM.dd' }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef>Ár</th>
+        <td mat-cell *matCellDef="let booking">{{ booking.total }} Ft</td>
+      </ng-container>
+
+      <ng-container matColumnDef="bookingState">
+        <th mat-header-cell *matHeaderCellDef>Foglalás státusza</th>
+        <td mat-cell *matCellDef="let booking">{{ booking.status}}</td>
+      </ng-container>
+      <!-- Műveletek -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Műveletek</th>
+        <td mat-cell *matCellDef="let booking">
+          <button mat-icon-button color="primary" (click)="completeBooking(booking._id)" matTooltip="Complete">
+            <mat-icon>check</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="cancelBooking(booking._id)" matTooltip="Cancel">
+            <mat-icon>close</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <!-- Fejléc és sorok -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+  </ng-container>
+
+  <!-- Üres állapot -->
+  <ng-template #noUsersTemplate>
+    <p>Nincs foglalás jelenleg.</p>
+  </ng-template>
+</div>

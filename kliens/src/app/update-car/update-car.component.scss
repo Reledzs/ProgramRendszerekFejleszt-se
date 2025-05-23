@@ -1,0 +1,64 @@
+/* Dialógus stílusok */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Formázott mezők */
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 20px;
+  }
+  
+  /* Gombok konténer */
+  .dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  /* Alap gombstílusok */
+  button {
+    min-width: 100px;
+  }
+  
+  /* Elsődleges gomb (Mentés) */
+  button[color="primary"] {
+    background-color: #1976d2;
+    color: white;
+  }
+  
+  /* Másodlagos gomb (Mégse) */
+  button[color="primary"]:hover {
+    background-color: #1257a3;
+  }
+  
+  @media (max-width: 600px) {
+    .dialog-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  .file-upload {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.file-label {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.file-name {
+  font-style: italic;
+  color: #666;
+}
+  

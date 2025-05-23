@@ -1,0 +1,28 @@
+<div class="login-container">
+    <form class="login-form" [formGroup]="signupForm" (ngSubmit)="onSubmit()"> 
+        <input formControlName="email" type="email" placeholder="Email" required [ngClass]="{'invalid-input': signupForm.get('email')?.errors}"/>
+        <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched">
+            <p *ngIf="signupForm.get('email')?.errors && signupForm.get('email')?.errors!['required']">Email is required.</p>
+            <p *ngIf="signupForm.get('email')?.errors && signupForm.get('email')?.errors!['email']">Email is invalid.</p>
+        </div>
+        <input formControlName="name" type="text" placeholder="Name" required/>
+        <input formControlName="address" type="text" placeholder="Address" required/>
+        <input formControlName="nickname" type="text" placeholder="Nickname" required/>
+        <input formControlName="password" type="password" placeholder="Password" required/>
+        <div *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.dirty || signupForm.get('password')?.touched">
+            <p *ngIf="signupForm.get('password')?.errors && signupForm.get('password')?.errors!['required']">Password is required</p>
+            <p *ngIf="signupForm.get('password')?.errors && signupForm.get('password')?.errors!['minlength']">Must be at least 6 characters.</p>
+        </div>
+        <input formControlName="confirmPassword" type="password" placeholder="Confirm Password" required/>
+        <div *ngIf="signupForm.get('confirmPassword')?.invalid && signupForm.get('confirmPassword')?.dirty || signupForm.get('confirmPassword')?.touched">
+            <p *ngIf="signupForm.get('confirmPassword')?.errors && signupForm.get('confirmPassword')?.errors!['required']">Password is required</p>
+            <p *ngIf="signupForm.get('confirmPassword')?.errors && signupForm.get('confirmPassword')?.errors!['mustMatch']">Passwords doesnt match</p>
+        </div>
+        <div class="buttons">
+            <button type="submit">Sign up</button>
+        </div>
+        <div class="buttons">
+            <button type="back" (click)="back()">Back</button>
+        </div>
+    </form>
+</div>

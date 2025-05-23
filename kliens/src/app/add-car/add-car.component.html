@@ -1,0 +1,33 @@
+<h2 mat-dialog-title>{{title}}</h2>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Márka</mat-label>
+    <input matInput [(ngModel)]="car.brand">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Model</mat-label>
+    <input matInput [(ngModel)]="car.car_model">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Évjárat</mat-label>
+    <input matInput type="number" [(ngModel)]="car.year">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Ár/nap (Ft)</mat-label>
+    <input matInput type="number" [(ngModel)]="car.price">
+  </mat-form-field>
+<br>
+  <label for="file" class="file-label">Autó képe: </label>
+  <input type="file" id="file" (change)="onFileSelected($event)" hidden />
+  <button mat-raised-button color="primary" (click)="fileInput.click()">Fájl kiválasztása</button>
+  <span class="file-name"> {{ selectedFileName }}</span>
+  <input type="file" #fileInput hidden (change)="onFileSelected($event)" />
+</div>
+  
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Mégse</button>
+  <button mat-raised-button color="primary" (click)="onSave()">Mentés</button>
+</div>
