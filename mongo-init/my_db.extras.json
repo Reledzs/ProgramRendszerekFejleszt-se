@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "68299c4d7b520d80b11a1a22"
+  },
+  "name": "GPS",
+  "price": "500",
+  "details": "WayteQ x995 MAX GPS navigáció",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6829a1170656fac91af14e47"
+  },
+  "name": "Sofőr",
+  "price": "40000",
+  "details": "Hivatásos sofőr",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6829a1660656fac91af14e4a"
+  },
+  "name": "Casco",
+  "price": "10000",
+  "details": "Baleset biztosítás",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682a2192d8493053ef063b9d"
+  },
+  "name": "Gyerekülés",
+  "price": 0,
+  "details": "Ingyenesen kérhető gyerekülés",
+  "__v": 0
+}]

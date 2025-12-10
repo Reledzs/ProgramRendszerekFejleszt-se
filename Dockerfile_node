@@ -1,0 +1,27 @@
+FROM node:20-alpine
+
+# szükséges csomagok a bcrypt fordításához
+RUN apk add --no-cache python3 make g++ 
+
+WORKDIR /app
+
+# Csak a csomagfájlokat másoljuk először (cache miatt)
+COPY ./server/package*.json ./
+COPY ./server/tsconfig.json ./
+
+# Függőségek telepítése (bcrypt újrafordítással)
+RUN npm install --build-from-source
+
+# Buildelt kód + publikus fájlok másolása
+COPY ./server/dist ./dist 
+COPY ./server/public ./public
+# bcrypt újrafordítása
+RUN npm install bcrypt --build-from-source
+
+# többi függőség telepítése
+RUN npm install
+RUN npm install prom-client
+EXPOSE 5000
+
+
+CMD ["node", "dist/index.js"]

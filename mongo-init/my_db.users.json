@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "email": "admin@admin.com",
+  "name": "Kristóf Molnár",
+  "address": "Szeged ..",
+  "nickname": "asdasd",
+  "password": "$2b$10$hW8IHmXyWYZf3SIVY7YK1..O0zJWDwEWMDlH3hkWydTQkoVRmsjsK",
+  "__v": 0,
+  "role": "Admin"
+},
+{
+  "_id": {
+    "$oid": "68285bcb91ed0c4b5aa15e44"
+  },
+  "email": "t@t.com",
+  "name": "Kristóf Molnár",
+  "address": "Budapest ..",
+  "nickname": "asd",
+  "password": "$2b$10$qt.VD2mZOyw8DbvlmGgED.MkUgIpRJugfk8Mog2wiEAvAJFItg8Um",
+  "role": "Admin",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682a16278d389791de4d9e28"
+  },
+  "email": "d@d.com",
+  "name": "delete",
+  "address": "Záhony ..",
+  "nickname": "delete",
+  "password": "$2b$10$9.AUTbuMt4lKWQqotEZqmumDBz/w.GyLkhch8PuQyyuoNM9Co2q1a",
+  "role": "User",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682a177f8d389791de4d9e41"
+  },
+  "email": "user@user.com",
+  "name": "Gipsz Jakab",
+  "address": "Szeged",
+  "nickname": "User1",
+  "password": "$2b$10$RvM6Pr8fsEa852Cesg4Kae68vkN0kFh0vM9TrnBw4J9F0L5dCTCo.",
+  "role": "User",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682a59d30e670019bd8cf05a"
+  },
+  "email": "felhasznalo@felhasznalo.com",
+  "name": "user",
+  "address": "Budapest..",
+  "nickname": "User",
+  "password": "$2b$10$DViHpK3f5NuGZPXPcDWc2ewZrPOOakRqKPYuAmOFb0xSSEYTZ0See",
+  "role": "User",
+  "__v": 0
+}]

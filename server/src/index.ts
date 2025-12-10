@@ -20,8 +20,14 @@ import path from 'path'
 
 const app = express();
 const port = 5000;
-const dbUrl = 'mongodb://localhost:6000/my_db';
-
+const dbUrl = 'mongodb://mongo:27017/my_db';
+const client = require('prom-client');
+const collectDefaultMetrics = client.collectDefaultMetrics;
+collectDefaultMetrics();
+app.get('/metrics', async (req, res) => {
+  res.set('Content-Type', client.register.contentType);
+  res.end(await client.register.metrics());
+});
 //connecting to db
 mongoose.connect(dbUrl).then((data)=>{
     console.log('Connected to mongoDB');
@@ -62,7 +68,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 configurePassport(passport);
-app.use('/uploads', express.static(path.join(__dirname, '../../public/uploads')));
+app.use('/uploads', express.static(path.join(__dirname, '../public/uploads')));
 app.use('/app', configureRoutes(passport, express.Router()));
 app.use('/app/cars', carRoutes(passport, express.Router()));
 app.use('/app/bookings', bookingRoutes(passport, express.Router()));

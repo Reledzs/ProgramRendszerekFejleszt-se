@@ -1,0 +1,89 @@
+
+services:
+  mongo:
+    image: mongo:7
+    container_name: mongodb-env
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo-init:/docker-entrypoint-initdb.d:ro
+    networks:
+      - app-net
+
+  backend:
+    build:
+        context: .
+        dockerfile: ./Dockerfile_node
+    container_name: node-server-env
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/my_db
+      - NODE_ENV=production
+    depends_on:
+    - mongo
+    networks:
+      - app-net
+
+  frontend:
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: angular-env
+    ports:
+      - "4200:4200"
+    depends_on:
+      - backend
+    networks:
+      - app-net
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx-env
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "80:80" 
+    networks:
+      - app-net
+    depends_on:
+      - frontend
+      - backend
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus-env
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    networks:
+      - app-net
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    networks:
+      - app-net
+    volumes:
+      # Becsatoljuk a konfigurációs fájlokat a megfelelő helyre:
+      - ./grafana/:/etc/grafana/
+  jenkins:
+    build: ./jenkins_config  # Itt hivatkozunk az előbb létrehozott mappára!
+    container_name: jenkins_server
+    user: root # Fontos, hogy hozzáférjen a docker sockethez
+    ports:
+      - "8080:8080"   # Webes felület
+      - "50000:50000" # Agent kommunikáció
+    volumes:
+      - ./jenkins_home:/var/jenkins_home        # Hogy ne vesszenek el a jobok újraindításkor
+      - /var/run/docker.sock:/var/run/docker.sock # A "varázslat": így éri el a Jenkins a Dockert
+    networks:
+      - app-net
+
+volumes:
+  jenkins_home:
+networks:
+  app-net:

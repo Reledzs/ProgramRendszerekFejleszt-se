@@ -1,0 +1,9 @@
+- name: Deploy Application
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Stop existing containers
+      command: docker-compose down
+
+    - name: Start new containers
+      command: docker-compose up -d --build

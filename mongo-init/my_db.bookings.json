@@ -1,0 +1,1731 @@
+[{
+  "_id": {
+    "$oid": "682462b5a98c379fc3fe5458"
+  },
+  "user": {
+    "$oid": "663e4a5e2cbddcb1c876a888"
+  },
+  "car": {
+    "$oid": "663e3d4e2cbddcb1c8765234"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-14T09:30:29.636Z"
+  },
+  "startDate": {
+    "$date": "2025-05-15T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-17T00:00:00.000Z"
+  },
+  "status": "active",
+  "total": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68246495c0970f963340141b"
+  },
+  "user": {
+    "$oid": "663e4a5e2cbddcb1c876a888"
+  },
+  "car": {
+    "$oid": "663e3d4e2cbddcb1c8765234"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-14T09:38:29.509Z"
+  },
+  "startDate": {
+    "$date": "2025-05-15T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-17T00:00:00.000Z"
+  },
+  "status": "active",
+  "total": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6824659ac0970f963340141e"
+  },
+  "user": {
+    "$oid": "663e4a5e2cbddcb1c876a888"
+  },
+  "car": {
+    "$oid": "663e3d4e2cbddcb1c8765234"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-14T09:42:50.556Z"
+  },
+  "startDate": {
+    "$date": "2025-05-15T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-17T00:00:00.000Z"
+  },
+  "status": "active",
+  "total": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682465c351064f8397ec037b"
+  },
+  "user": {
+    "$oid": "663e4a5e2cbddcb1c876a888"
+  },
+  "car": {
+    "$oid": "663e3d4e2cbddcb1c8765234"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-14T09:43:31.359Z"
+  },
+  "startDate": {
+    "$date": "2025-05-15T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-17T00:00:00.000Z"
+  },
+  "status": "active",
+  "total": 1998,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68248f7864c323a4d4c2766b"
+  },
+  "user": {
+    "$oid": "663e4a5e2cbddcb1c876a888"
+  },
+  "car": {
+    "$oid": "663e3d4e2cbddcb1c8765234"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-14T12:41:28.886Z"
+  },
+  "startDate": {
+    "$date": "2025-05-15T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-17T00:00:00.000Z"
+  },
+  "status": "active",
+  "total": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682492015b3e2e2701d805ac"
+  },
+  "user": {
+    "$oid": "67c82cb8221702189916eafa"
+  },
+  "car": {
+    "$oid": "663e3d4e2cbddcb1c8765234"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-14T12:52:17.071Z"
+  },
+  "startDate": {
+    "$date": "2025-05-15T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-17T00:00:00.000Z"
+  },
+  "status": "active",
+  "total": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6824988ad9fd7870e54bb247"
+  },
+  "user": {
+    "$oid": "67c82cb8221702189916eafa"
+  },
+  "car": {
+    "$oid": "663e3d4e2cbddcb1c8765234"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-14T13:20:10.670Z"
+  },
+  "startDate": {
+    "$date": "2025-05-15T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-17T00:00:00.000Z"
+  },
+  "status": "active",
+  "total": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6825181e6a794b6883af03c1"
+  },
+  "user": {
+    "$oid": "67c82cb8221702189916eafa"
+  },
+  "car": {
+    "$oid": "68227aabec6fb961f78d5ac9"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-14T22:24:30.682Z"
+  },
+  "startDate": {
+    "$date": "2025-05-16T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-16T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 4124,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682518616a794b6883af03c6"
+  },
+  "user": {
+    "$oid": "67c82cb8221702189916eafa"
+  },
+  "car": {
+    "$oid": "68227aabec6fb961f78d5ac9"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-14T22:25:37.252Z"
+  },
+  "startDate": {
+    "$date": "2025-05-16T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-23T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 32992,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68251e226a794b6883af03e1"
+  },
+  "user": {
+    "$oid": "67c82cb8221702189916eafa"
+  },
+  "car": {
+    "$oid": "68227aabec6fb961f78d5ac9"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-14T22:50:10.418Z"
+  },
+  "startDate": {
+    "$date": "2025-05-14T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-15T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 8248,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68251ec26a794b6883af03e9"
+  },
+  "user": {
+    "$oid": "67c82cb8221702189916eafa"
+  },
+  "car": {
+    "$oid": "68227aabec6fb961f78d5ac9"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-14T22:52:50.653Z"
+  },
+  "startDate": {
+    "$date": "2025-05-14T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-16T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 12372,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6825e04b8fbbc0af7447280b"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "682276bcec6fb961f78d5a90"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-15T12:38:35.771Z"
+  },
+  "startDate": {
+    "$date": "2025-05-16T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-16T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 999,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682625e68fbbc0af7447281c"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68227aabec6fb961f78d5ac9"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-15T17:35:34.552Z"
+  },
+  "startDate": {
+    "$date": "2025-05-17T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-23T22:00:00.000Z"
+  },
+  "status": "canceled",
+  "total": 28868,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682625e98fbbc0af7447281f"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68227aabec6fb961f78d5ac9"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-15T17:35:37.368Z"
+  },
+  "startDate": {
+    "$date": "2025-05-17T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-23T22:00:00.000Z"
+  },
+  "status": "canceled",
+  "total": 28868,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682625ea8fbbc0af74472822"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68227aabec6fb961f78d5ac9"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-15T17:35:38.362Z"
+  },
+  "startDate": {
+    "$date": "2025-05-17T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-23T22:00:00.000Z"
+  },
+  "status": "canceled",
+  "total": 28868,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682625ea8fbbc0af74472825"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68227aabec6fb961f78d5ac9"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-15T17:35:38.603Z"
+  },
+  "startDate": {
+    "$date": "2025-05-17T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-23T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 28868,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68265905c94a9ab97f418b04"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68227aabec6fb961f78d5ac9"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-15T00:00:00.000Z"
+  },
+  "startDate": {
+    "$date": "2025-05-10T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-30T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 70108,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68271948ce42706fb0ac04bd"
+  },
+  "user": {
+    "$oid": "67c82cb8221702189916eafa"
+  },
+  "car": {
+    "$oid": "6822722274d36bb85474c16e"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-16T10:54:00.573Z"
+  },
+  "startDate": {
+    "$date": "2025-05-24T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-30T22:00:00.000Z"
+  },
+  "status": "canceled",
+  "total": 6993,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68272428e96f501021d2a62b"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-16T11:40:24.280Z"
+  },
+  "startDate": {
+    "$date": "2025-05-17T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-18T22:00:00.000Z"
+  },
+  "status": "canceled",
+  "total": 178000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68272447e96f501021d2a633"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "682721bce96f501021d2a5f8"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-16T11:40:55.009Z"
+  },
+  "startDate": {
+    "$date": "2025-05-24T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-30T22:00:00.000Z"
+  },
+  "status": "canceled",
+  "total": 553000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68272455e96f501021d2a638"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272198e96f501021d2a5f5"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-16T11:41:09.978Z"
+  },
+  "startDate": {
+    "$date": "2025-05-21T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-23T22:00:00.000Z"
+  },
+  "status": "completed",
+  "total": 330000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6827293ae96f501021d2a64f"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-16T12:02:02.164Z"
+  },
+  "startDate": {
+    "$date": "2025-05-17T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-24T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 712000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682833e6e96f501021d2a666"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T06:59:50.816Z"
+  },
+  "startDate": {
+    "$date": "2025-05-17T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-23T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 623000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68283f6ae96f501021d2a6d1"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T07:48:58.344Z"
+  },
+  "startDate": {
+    "$date": "2025-05-24T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-30T22:00:00.000Z"
+  },
+  "status": "canceled",
+  "total": 623000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682840b4e96f501021d2a8e7"
+  },
+  "user": {
+    "$oid": "67c82cb8221702189916eafa"
+  },
+  "car": {
+    "$oid": "68272198e96f501021d2a5f5"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T07:54:28.036Z"
+  },
+  "startDate": {
+    "$date": "2025-05-16T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-16T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 110000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6828496ce96f501021d2a929"
+  },
+  "user": {
+    "$oid": "67c82cb8221702189916eafa"
+  },
+  "car": {
+    "$oid": "682720a3e96f501021d2a5e1"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T08:31:40.056Z"
+  },
+  "startDate": {
+    "$date": "2025-05-22T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-23T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 170000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6828ff68bd3fc94da77926c6"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:28:08.405Z"
+  },
+  "startDate": {
+    "$date": "2025-05-31T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-06-02T22:00:00.000Z"
+  },
+  "status": "canceled",
+  "total": 267000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6828ff73bd3fc94da77926cb"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:28:19.210Z"
+  },
+  "startDate": {
+    "$date": "2025-06-15T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-06-19T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 445000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6828ff8fbd3fc94da77926ce"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:28:47.103Z"
+  },
+  "startDate": {
+    "$date": "2025-06-15T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-06-19T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 445000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6828ff9dbd3fc94da77926d3"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:29:01.114Z"
+  },
+  "startDate": {
+    "$date": "2025-06-22T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-06-23T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 178000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6828ffa0bd3fc94da77926d6"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:29:04.800Z"
+  },
+  "startDate": {
+    "$date": "2025-06-21T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-06-24T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 356000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68290067bd3fc94da77926db"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:32:23.809Z"
+  },
+  "startDate": {
+    "$date": "2025-07-14T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-07-15T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 178000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6829006bbd3fc94da77926de"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:32:27.545Z"
+  },
+  "startDate": {
+    "$date": "2025-07-12T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-07-16T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 445000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6829007ebd3fc94da77926e3"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:32:46.970Z"
+  },
+  "startDate": {
+    "$date": "2025-07-02T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-07-02T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 89000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68290083bd3fc94da77926e6"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:32:51.712Z"
+  },
+  "startDate": {
+    "$date": "2025-07-01T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-07-03T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 267000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682900bb79e78065c6119296"
+  },
+  "user": {
+    "$oid": "67cead87b1e6e2e642168249"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:33:47.780Z"
+  },
+  "startDate": {
+    "$date": "2025-07-08T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-07-08T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 89000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682900cc79e78065c611929f"
+  },
+  "user": {
+    "$oid": "67cead87b1e6e2e642168249"
+  },
+  "car": {
+    "$oid": "682720a3e96f501021d2a5e1"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:34:04.567Z"
+  },
+  "startDate": {
+    "$date": "2025-05-19T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-20T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 170000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682900cf79e78065c61192a3"
+  },
+  "user": {
+    "$oid": "67cead87b1e6e2e642168249"
+  },
+  "car": {
+    "$oid": "682720a3e96f501021d2a5e1"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:34:07.786Z"
+  },
+  "startDate": {
+    "$date": "2025-05-18T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-21T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 340000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6829017c91ef77e986b9c69d"
+  },
+  "user": {
+    "$oid": "67c82cb8221702189916eafa"
+  },
+  "car": {
+    "$oid": "682720a3e96f501021d2a5e1"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:37:00.145Z"
+  },
+  "startDate": {
+    "$date": "2025-05-26T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-27T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 170000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6829017f91ef77e986b9c6a1"
+  },
+  "user": {
+    "$oid": "67c82cb8221702189916eafa"
+  },
+  "car": {
+    "$oid": "682720a3e96f501021d2a5e1"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:37:03.898Z"
+  },
+  "startDate": {
+    "$date": "2025-05-25T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-28T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 340000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6829020a2dc82eedd8495758"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "682720c4e96f501021d2a5e4"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:39:22.870Z"
+  },
+  "startDate": {
+    "$date": "2025-05-20T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-20T22:00:00.000Z"
+  },
+  "status": "canceled",
+  "total": 83000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6829020f2dc82eedd849575c"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "682720c4e96f501021d2a5e4"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:39:27.421Z"
+  },
+  "startDate": {
+    "$date": "2025-05-19T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-21T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 249000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6829026507df146aedd7fdd2"
+  },
+  "user": {
+    "$oid": "67c82cb8221702189916eafa"
+  },
+  "car": {
+    "$oid": "682721e2e96f501021d2a5fb"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:40:53.036Z"
+  },
+  "startDate": {
+    "$date": "2025-05-20T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-20T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 120000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6829027607df146aedd7fdd9"
+  },
+  "user": {
+    "$oid": "67c82cb8221702189916eafa"
+  },
+  "car": {
+    "$oid": "682721e2e96f501021d2a5fb"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:41:10.807Z"
+  },
+  "startDate": {
+    "$date": "2025-05-26T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-27T22:00:00.000Z"
+  },
+  "status": "canceled",
+  "total": 240000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68290392f5e1bb6239fb97b6"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "682720c4e96f501021d2a5e4"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:45:54.082Z"
+  },
+  "startDate": {
+    "$date": "2025-05-27T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-27T22:00:00.000Z"
+  },
+  "status": "canceled",
+  "total": 83000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682903bbf5e1bb6239fb97c3"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "682720c4e96f501021d2a5e4"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:46:35.681Z"
+  },
+  "startDate": {
+    "$date": "2025-05-28T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-28T22:00:00.000Z"
+  },
+  "status": "canceled",
+  "total": 83000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682903d6f5e1bb6239fb97cf"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "682720c4e96f501021d2a5e4"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T21:47:02.454Z"
+  },
+  "startDate": {
+    "$date": "2025-05-24T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-24T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 83000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68290d736cc203be16bab69d"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "6827229be96f501021d2a606"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-17T22:28:03.488Z"
+  },
+  "startDate": {
+    "$date": "2025-05-20T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-20T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 780000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68299eee0656fac91af14e2f"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-18T08:48:46.098Z"
+  },
+  "startDate": {
+    "$date": "2025-05-26T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-27T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 178000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68299f900656fac91af14e37"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-18T08:51:28.589Z"
+  },
+  "startDate": {
+    "$date": "2025-05-29T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-29T22:00:00.000Z"
+  },
+  "status": "canceled",
+  "total": 89000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68299fc70656fac91af14e3e"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-18T08:52:23.867Z"
+  },
+  "startDate": {
+    "$date": "2025-06-10T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-06-10T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 89000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6829fd6834a1d9465c3dca28"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "682720a3e96f501021d2a5e1"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-18T15:31:52.150Z"
+  },
+  "startDate": {
+    "$date": "2025-05-17T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-17T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 85000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6829fdcf34a1d9465c3dca36"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "682720c4e96f501021d2a5e4"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-18T15:33:35.525Z"
+  },
+  "startDate": {
+    "$date": "2025-05-28T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-28T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 83000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6829fe6834a1d9465c3dca42"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "682721e2e96f501021d2a5fb"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-18T15:36:08.870Z"
+  },
+  "startDate": {
+    "$date": "2025-05-26T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-26T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 120000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6829fe8434a1d9465c3dca49"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "682721e2e96f501021d2a5fb"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-05-18T15:36:36.633Z"
+  },
+  "startDate": {
+    "$date": "2025-05-28T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-28T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 120000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6829fed334a1d9465c3dca53"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "682721e2e96f501021d2a5fb"
+  },
+  "extras": [
+    {
+      "$oid": "68299c4d7b520d80b11a1a22"
+    },
+    {
+      "$oid": "6829a1170656fac91af14e47"
+    },
+    {
+      "$oid": "6829a1660656fac91af14e4a"
+    },
+    {
+      "$oid": "6829aef70656fac91af14e63"
+    }
+  ],
+  "bookingDate": {
+    "$date": "2025-05-18T15:37:55.404Z"
+  },
+  "startDate": {
+    "$date": "2025-05-30T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-30T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 120000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6829ff3b34a1d9465c3dca5d"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "682721e2e96f501021d2a5fb"
+  },
+  "extras": [
+    {
+      "$oid": "68299c4d7b520d80b11a1a22"
+    },
+    {
+      "$oid": "6829a1170656fac91af14e47"
+    },
+    {
+      "$oid": "6829a1660656fac91af14e4a"
+    },
+    {
+      "$oid": "6829aef70656fac91af14e63"
+    }
+  ],
+  "bookingDate": {
+    "$date": "2025-05-18T15:39:39.001Z"
+  },
+  "startDate": {
+    "$date": "2025-05-24T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-24T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 120000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682a001934a1d9465c3dca64"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "682721e2e96f501021d2a5fb"
+  },
+  "extras": [
+    {
+      "$oid": "68299c4d7b520d80b11a1a22"
+    },
+    {
+      "$oid": "6829a1170656fac91af14e47"
+    },
+    {
+      "$oid": "6829a1660656fac91af14e4a"
+    },
+    {
+      "$oid": "6829aef70656fac91af14e63"
+    }
+  ],
+  "bookingDate": {
+    "$date": "2025-05-18T15:43:21.430Z"
+  },
+  "startDate": {
+    "$date": "2025-05-22T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-22T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 120000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682a02b6530a5c61d99da85e"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "682722f0e96f501021d2a609"
+  },
+  "extras": [
+    {
+      "$oid": "6829a1170656fac91af14e47"
+    }
+  ],
+  "bookingDate": {
+    "$date": "2025-05-18T15:54:30.970Z"
+  },
+  "startDate": {
+    "$date": "2025-05-27T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-27T22:00:00.000Z"
+  },
+  "status": "completed",
+  "total": 860000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682a03c4530a5c61d99da875"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [
+    {
+      "$oid": "68299c4d7b520d80b11a1a22"
+    },
+    {
+      "$oid": "6829a1660656fac91af14e4a"
+    }
+  ],
+  "bookingDate": {
+    "$date": "2025-05-18T15:59:00.936Z"
+  },
+  "startDate": {
+    "$date": "2025-07-28T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-07-28T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 89000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682a03f4530a5c61d99da87c"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [
+    {
+      "$oid": "68299c4d7b520d80b11a1a22"
+    },
+    {
+      "$oid": "6829a1170656fac91af14e47"
+    },
+    {
+      "$oid": "6829a1660656fac91af14e4a"
+    }
+  ],
+  "bookingDate": {
+    "$date": "2025-05-18T15:59:48.172Z"
+  },
+  "startDate": {
+    "$date": "2025-08-30T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-08-30T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 89000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682a0435530a5c61d99da883"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [
+    {
+      "$oid": "6829a1170656fac91af14e47"
+    }
+  ],
+  "bookingDate": {
+    "$date": "2025-05-18T16:00:53.277Z"
+  },
+  "startDate": {
+    "$date": "2025-08-12T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-08-12T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 89000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682a046a530a5c61d99da88a"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [
+    {
+      "$oid": "68299c4d7b520d80b11a1a22"
+    },
+    {
+      "$oid": "6829a1170656fac91af14e47"
+    }
+  ],
+  "bookingDate": {
+    "$date": "2025-05-18T16:01:46.568Z"
+  },
+  "startDate": {
+    "$date": "2025-07-11T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-07-11T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 89000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682a15908d389791de4d9e07"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "6827229be96f501021d2a606"
+  },
+  "extras": [
+    {
+      "$oid": "68299c4d7b520d80b11a1a22"
+    },
+    {
+      "$oid": "6829a1170656fac91af14e47"
+    }
+  ],
+  "bookingDate": {
+    "$date": "2025-05-18T17:14:56.152Z"
+  },
+  "startDate": {
+    "$date": "2025-05-25T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-05-25T22:00:00.000Z"
+  },
+  "status": "active",
+  "total": 820500,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682a5a3a0e670019bd8cf066"
+  },
+  "user": {
+    "$oid": "682a59d30e670019bd8cf05a"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [
+    {
+      "$oid": "68299c4d7b520d80b11a1a22"
+    },
+    {
+      "$oid": "6829a1170656fac91af14e47"
+    }
+  ],
+  "bookingDate": {
+    "$date": "2025-05-18T22:07:54.843Z"
+  },
+  "startDate": {
+    "$date": "2025-06-01T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-06-03T22:00:00.000Z"
+  },
+  "status": "canceled",
+  "total": 388500,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682a5a4c0e670019bd8cf06c"
+  },
+  "user": {
+    "$oid": "682a59d30e670019bd8cf05a"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [
+    {
+      "$oid": "682a2192d8493053ef063b9d"
+    }
+  ],
+  "bookingDate": {
+    "$date": "2025-05-18T22:08:12.564Z"
+  },
+  "startDate": {
+    "$date": "2025-06-04T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-06-05T22:00:00.000Z"
+  },
+  "status": "canceled",
+  "total": 178000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682a5b520e670019bd8cf07e"
+  },
+  "user": {
+    "$oid": "682a177f8d389791de4d9e41"
+  },
+  "car": {
+    "$oid": "68272067e96f501021d2a5de"
+  },
+  "extras": [
+    {
+      "$oid": "68299c4d7b520d80b11a1a22"
+    },
+    {
+      "$oid": "6829a1170656fac91af14e47"
+    },
+    {
+      "$oid": "6829a1660656fac91af14e4a"
+    }
+  ],
+  "bookingDate": {
+    "$date": "2025-05-18T22:12:34.891Z"
+  },
+  "startDate": {
+    "$date": "2025-07-25T22:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-07-25T22:00:00.000Z"
+  },
+  "status": "canceled",
+  "total": 139500,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6935c78c9f425395c3b9051a"
+  },
+  "user": {
+    "$oid": "67c841e1ca8cdf3ba30bca60"
+  },
+  "car": {
+    "$oid": "682720a3e96f501021d2a5e1"
+  },
+  "extras": [],
+  "bookingDate": {
+    "$date": "2025-12-07T18:29:32.761Z"
+  },
+  "startDate": {
+    "$date": "2025-12-06T23:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-12-10T23:00:00.000Z"
+  },
+  "status": "active",
+  "total": 425000,
+  "__v": 0
+}]
