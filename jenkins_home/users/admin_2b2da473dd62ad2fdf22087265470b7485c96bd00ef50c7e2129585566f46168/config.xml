@@ -2,15 +2,18 @@
 <user>
   <version>10</version>
   <id>admin</id>
-  <fullName>admin</fullName>
+  <fullName>Kristóf Molnár</fullName>
   <properties>
-    <jenkins.security.ApiTokenProperty>
-      <tokenStore>
-        <tokenList/>
-      </tokenStore>
-    </jenkins.security.ApiTokenProperty>
+    <io.jenkins.plugins.thememanager.ThemeUserProperty plugin="theme-manager@327.v780d7096ec29"/>
     <jenkins.console.ConsoleUrlProviderUserProperty/>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1453.v9b_a_29777a_b_fd">
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
     <jenkins.views.ViewsTabBarUserProperty/>
+    <hudson.plugins.emailext.watching.EmailExtWatchAction_-UserProperty plugin="email-ext@1933.v45cec755423f">
+      <triggers/>
+      <projectName></projectName>
+    </hudson.plugins.emailext.watching.EmailExtWatchAction_-UserProperty>
     <hudson.model.MyViewsProperty>
       <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
       <views>
@@ -23,11 +26,14 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
+    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.217.va_6b_de84cc74b_">
+      <providerId>default</providerId>
+    </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
     <hudson.model.PaneStatusProperties>
       <collapsed/>
     </hudson.model.PaneStatusProperties>
     <jenkins.security.seed.UserSeedProperty>
-      <seed>ba0a02c38f496c47</seed>
+      <seed>eebd309078bedd45</seed>
     </jenkins.security.seed.UserSeedProperty>
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>true</insensitiveSearch>
@@ -37,7 +43,15 @@
       <flags/>
     </jenkins.model.experimentalflags.UserExperimentalFlagsProperty>
     <hudson.security.HudsonPrivateSecurityRealm_-Details>
-      <passwordHash>#jbcrypt:$2a$10$D5r9lHteSbHU.01LcxJj2O2YgAqtHBxNIIp92azqHbvnczgVri0Tm</passwordHash>
+      <passwordHash>#jbcrypt:$2a$10$161q5Y7tTu61bJc5IHAXAeFu2qzBvW7a6eqCB3KCpvNrxhDhWFLGy</passwordHash>
     </hudson.security.HudsonPrivateSecurityRealm_-Details>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@525.v2458b_d8a_1a_71">
+      <emailAddress>molanrkris@gmail.com</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+    <jenkins.security.ApiTokenProperty>
+      <tokenStore>
+        <tokenList/>
+      </tokenStore>
+    </jenkins.security.ApiTokenProperty>
   </properties>
 </user>

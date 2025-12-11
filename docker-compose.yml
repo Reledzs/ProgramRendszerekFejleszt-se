@@ -8,6 +8,8 @@ services:
       - "27017:27017"
     volumes:
       - ./mongo-init:/docker-entrypoint-initdb.d:ro
+      - ./server/database/:/data/db:ro
+      - mongodb_data:/data/db
     networks:
       - app-net
 
@@ -68,7 +70,6 @@ services:
     networks:
       - app-net
     volumes:
-      # Becsatoljuk a konfigurációs fájlokat a megfelelő helyre:
       - ./grafana/:/etc/grafana/
   jenkins:
     build: ./jenkins_config  # Itt hivatkozunk az előbb létrehozott mappára!
@@ -85,5 +86,6 @@ services:
 
 volumes:
   jenkins_home:
+  mongodb_data:
 networks:
   app-net:
