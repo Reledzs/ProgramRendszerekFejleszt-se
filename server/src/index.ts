@@ -18,7 +18,7 @@ import path from 'path'
 // undefined vs. null
 // === vs. ==
 const PROJECT_ROOT = path.join(__dirname, '..', '..');
-const ANGULAR_DIST_PATH = path.join(PROJECT_ROOT, 'kliens', 'dist', 'browser');
+const ANGULAR_DIST_PATH = path.join(PROJECT_ROOT, 'kliens', 'dist','frontend', 'browser');
 const app = express();
 const port = 5000;
 const dbUrl = 'mongodb://mongo:27017/my_db';

@@ -30,7 +30,7 @@ const path_1 = __importDefault(require("path"));
 // undefined vs. null
 // === vs. ==
 const PROJECT_ROOT = path_1.default.join(__dirname, '..', '..');
-const ANGULAR_DIST_PATH = path_1.default.join(PROJECT_ROOT, 'kliens', 'dist', 'browser');
+const ANGULAR_DIST_PATH = path_1.default.join(PROJECT_ROOT, 'kliens', 'dist', 'frontend', 'browser');
 const app = (0, express_1.default)();
 const port = 5000;
 const dbUrl = 'mongodb://mongo:27017/my_db';
