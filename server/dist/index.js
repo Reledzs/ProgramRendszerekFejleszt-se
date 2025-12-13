@@ -29,6 +29,8 @@ const path_1 = __importDefault(require("path"));
 // any vs. unknown
 // undefined vs. null
 // === vs. ==
+const PROJECT_ROOT = path_1.default.join(__dirname, '..', '..');
+const ANGULAR_DIST_PATH = path_1.default.join(PROJECT_ROOT, 'kliens', 'dist', 'browser');
 const app = (0, express_1.default)();
 const port = 5000;
 const dbUrl = 'mongodb://mongo:27017/my_db';
@@ -39,7 +41,7 @@ app.get('/metrics', (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     res.set('Content-Type', client.register.contentType);
     res.end(yield client.register.metrics());
 }));
-app.use(express_1.default.static(path_1.default.join(__dirname, '../../kliens/dist/src/index.html')));
+app.use(express_1.default.static(ANGULAR_DIST_PATH));
 //connecting to db
 mongoose_1.default.connect(dbUrl).then((data) => {
     console.log('Connected to mongoDB');
@@ -83,7 +85,7 @@ app.listen(port, () => {
     console.log('Server is listening on port ' + port.toString());
 });
 app.get('*', (req, res) => {
-    res.sendFile(path_1.default.join('../../kliens/dist/src/index.html'));
+    res.sendFile(path_1.default.join(ANGULAR_DIST_PATH, 'index.html'));
 });
 console.log('After server is ready.');
 //# sourceMappingURL=index.js.map
