@@ -39,6 +39,7 @@ app.get('/metrics', (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     res.set('Content-Type', client.register.contentType);
     res.end(yield client.register.metrics());
 }));
+app.use(express_1.default.static(path_1.default.join(__dirname, '../kliens/dist/frontend-neve')));
 //connecting to db
 mongoose_1.default.connect(dbUrl).then((data) => {
     console.log('Connected to mongoDB');

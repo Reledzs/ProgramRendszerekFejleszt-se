@@ -1,10 +1,59 @@
-- name: Deploy Application
-  hosts: localhost
-  connection: local
-  tasks:
-    - name: Stop and remove old containers
-      command: docker-compose down
+- name: Deploy NodeJS application
+  hosts: all
+  gather_facts: yes
 
-    - name: Start new containers using the Jenkins-built images
-      # Itt már NINCS '--build' kapcsoló!
-      command: docker-compose up -d
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+      become: true
+
+    - name: Install required packages
+      apt:
+        name: "{{ packages }}"
+        state: present
+      vars:
+        packages:
+          - git
+          - curl
+      become: true
+
+    - name: Install NodeJS
+      shell: |
+        curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+        apt-get install -y nodejs
+      become: true
+
+    - name: Create app directory
+      file:
+        path: /app
+        state: directory
+        mode: '0755'
+
+    - name: Clone repository
+      git:
+        repo: https://github.com/Reledzs/ProgramRendszerekFejleszt-se.git
+        dest: /app
+        version: feature/http-server
+        force: yes
+      
+    - name: Install npm dependencies
+      npm:
+        path: /app
+        state: present
+
+    - name: Build NodeJS application
+      shell: |
+        npm run build
+      args:
+        chdir: /app
+
+    - name: Start application with pm2
+      shell: |
+        npm install -g pm2
+        pm2 delete calculator-app || true
+        pm2 start dist/index.js --name "calculator-app"
+      args:
+        chdir: /app
+      become: true

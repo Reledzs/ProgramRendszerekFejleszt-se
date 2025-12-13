@@ -1,88 +1,87 @@
 pipeline {
-    // Hol fut a pipeline: a Jenkins konténerben
-    agent any 
+    agent any
+
+    tools {
+        nodejs 'NodeJS 20'  // Feltételezve, hogy van egy "NodeJS 20" nevű NodeJS telepítés konfigurálva Jenkinsben
+    }
 
     environment {
-        // Környezeti változók a Docker Image-ek címkézéséhez
-        // A BUILD_ID a Jenkins által automatikusan generált build-szám
-        IMAGE_NAME_BACKEND = "my-backend-app:${BUILD_ID}"
-        IMAGE_NAME_FRONTEND = "my-frontend-app:${BUILD_ID}"
+        GITHUB_REPO = 'https://github.com/Reledzs/ProgramRendszerekFejleszt-se.git'
+        BRANCH = 'main'
+        DEPLOY_CONTAINER = 'deploy-server-env'
     }
 
     stages {
-        // 1. FÁZIS: Kód beszerzése (CI kezdete)
-        stage('1. Checkout SCM') {
+        stage('Checkout') {
             steps {
-                echo "Checking out code from Git: ${env.BUILD_URL}"
-                checkout scm
+                git branch: env.BRANCH, url: env.GITHUB_REPO
             }
         }
 
-        // 2. FÁZIS: Backend Ellenőrzés és Build
-        stage('2. Backend Build & Test') {
+        stage('Install Dependencies') {
             steps {
-                dir('./server') {
-                    // Installálás
-                    echo 'Installing Backend dependencies...'
-                    sh 'npm install'
-                    
-                    // Sérülékenység ellenőrzés
-                    echo 'Running security audit...'
-                    // Az || true miatt nem áll le, ha talál kisebb hibát
-                    sh 'npm audit --audit-level=critical || true'
-                    
-                    // Tesztelés (a package.json-ben definiált 'test' script futtatása)
-                    echo 'Running Backend Tests...'
-                    //sh 'npm test' 
-                    
-                    // TS build (A 'npm run build' parancs)
-                    echo 'Building TypeScript to JS...'
-                    //sh 'npm run build'
+                sh 'npm ci'  // Használjuk az 'npm ci'-t az 'npm install' helyett a konzisztens telepítés érdekében
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+                sshagent(credentials: ['DEPLOY_SERVER_SSH']) { // sshagent plugin szükséges
+                    sh """
+                    ssh -o StrictHostKeyChecking=no deploy@${env.DEPLOY_CONTAINER} -p 22 '
+                     # 1. Alapállapot
+                    cd /app
+                    # (Vigyázz az rm -rf *-al, nehogy konfigurációs fájlokat törölj, ha vannak!)
+                    rm -rf ProgramRendszerekFejleszt-se 
+            
+                    # 2. Friss kód letöltése
+                    git clone https://github.com/Reledzs/ProgramRendszerekFejleszt-se.git
+                    cd /app/ProgramRendszerekFejleszt-se
+                    git checkout origin/main
+
+                    # -----------------------------------------------------
+                    # 3. ANGULAR FRONTEND BUILD (ÚJ RÉSZ)
+                    # -----------------------------------------------------
+                    echo "Building Frontend..."
+                    cd kliens  # Vagy ami a frontend mappád neve (pl. frontend)
+                    npm ci     # Frontend függőségek telepítése
+                    npm run build # Angular build (létrehozza a dist mappát)
+            
+                    # Visszalépés a főkönyvtárba vagy a szerver mappába
+                    cd .. 
+
+                    # -----------------------------------------------------
+                    # 4. BACKEND BUILD ÉS INDÍTÁS
+                    # -----------------------------------------------------
+                    echo "Building and Starting Backend..."
+                    cd server
+                    npm ci
+                    pm run build
+            
+                    # PM2 újraindítás (vagy start, ha még nem fut)
+                    # A --update-env fontos, ha változtak a környezeti változók
+                    pm2 restart node-server --update-env || pm2 start dist/index.js --name "node-server"
+        '
+    """
                 }
             }
         }
 
-        // 4. FÁZIS: Docker Image Építés (Csomagolás)
-        stage('4. Docker Image Build') {
+        stage('Cleanup') {
             steps {
-                echo "Building Backend Image: ${IMAGE_NAME_BACKEND}"
-                // A -f (Dockerfile) és az utolsó pont (context) fontossága
-                sh "docker build -t ${IMAGE_NAME_BACKEND} -f ./Dockerfile_node ./server"
-                
-                echo "Building Frontend Image: ${IMAGE_NAME_FRONTEND}"
-                sh "docker build -t ${IMAGE_NAME_FRONTEND} -f ./Dockerfile ./frontend"
-                
-                // Címkézés 'latest'-re, hogy a docker-compose megtalálja
-                sh "docker tag ${IMAGE_NAME_BACKEND} my-backend-app:latest"
-                sh "docker tag ${IMAGE_NAME_FRONTEND} my-frontend-app:latest"
-            }
-        }
-        
-        // 5. FÁZIS: Deploy (CD – Continuous Deployment)
-        stage('5. Deploy with Ansible') {
-            steps {
-                echo 'Starting Ansible Deployment to local host...'
-                // Meghívjuk a deploy playbookot
-                // Fontos: az Ansible-nek látnia kell az ansible/deploy.yml fájlt
-                sh 'ansible-playbook ansible/deploy.yml'
-                
-                echo 'Deployment finished. New containers are running.'
+                // Munkaterület tisztítása
+                deleteDir()
             }
         }
     }
 
-    // UTOLSÓ LÉPÉS: Visszajelzés és Takarítás
     post {
-        always {
-            echo 'Pipeline job finished.'
-            // Hasznos takarítási lépés: töröljük a "dangling" (felesleges) image-eket
-            sh 'docker image prune -f || true' 
-        }
         success {
-            echo 'SUCCESS: BUILD és DEPLOYMENT kész! Az alkalmazás fut!'
+            echo 'Pipeline sikeresen lefutott!'
         }
         failure {
-            echo 'FAILURE: A pipeline elhasalt. Ellenőrizd a logokat!'
+            echo 'A pipeline végrehajtása sikertelen volt.'
+            // Itt értesítést küldhetnénk, például e-mailt vagy Slack üzenetet
         }
     }
 }
