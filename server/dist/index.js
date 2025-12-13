@@ -82,5 +82,8 @@ app.use('/app/extras', (0, extra_routes_1.extraRoutes)(passport_1.default, expre
 app.listen(port, () => {
     console.log('Server is listening on port ' + port.toString());
 });
+app.get('*', (req, res) => {
+    res.sendFile(path_1.default.join('../../kliens/dist/src/index.html'));
+});
 console.log('After server is ready.');
 //# sourceMappingURL=index.js.map
