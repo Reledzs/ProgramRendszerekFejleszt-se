@@ -1,46 +1,17 @@
-# Dockerfile_node
-
-# Bázis image
 FROM node:20-alpine
 
-# Szükséges csomagok a bcrypt fordításához (alpine Linux disztrón)
-# Ezt azonnal telepítjük, mivel a bcrypt telepítéséhez kell
 RUN apk add --no-cache python3 make g++ 
 
 WORKDIR /app
 
-# ----------------------------------------------------
-# 1. DEPENDENCY-K MÁSOLÁSA (Context: ./server)
-# A Build Context feltételezhetően a ./server mappa, ezért nincs /server előtag!
-# Csak a csomagfájlokat másoljuk először a cache miatt
 COPY ./server/package*.json ./
 COPY ./server/tsconfig.json ./
 
-# 2. DEPENDENCY-K TELEPÍTÉSE
-# Telepítjük az összes függőséget, beleértve a bcrypt-et is.
-# A --build-from-source flag biztosítja, hogy a bcrypt rendesen leforduljon a konténeren belül.
 RUN npm install --build-from-source
 
-# ----------------------------------------------------
-# 3. KÓD MÁSOLÁSA ÉS BUILDELÉSE (A Jenkins már megtette, de itt is kell)
-# Ezzel biztosítjuk, hogy a konténerbe friss, forráskód kerüljön, 
-# a Jenkins pipeline-ban futó 'npm run build' eredménye be tudjon kerülni a 'dist'-be.
-
-# Mivel a Jenkinsfile már futtatta a 'npm run build'-et, 
-# a 'dist' mappa létrejött a gazdagépen (Jenkins workspace).
-
-# A Jenkins CI FÁZIS EREDMÉNYÉNEK MÁSOLÁSA:
-# Itt csak a *kész* kódot másoljuk be, amit a Jenkins fordított.
 COPY ./server/dist ./dist
 COPY ./server/public ./public
-# Ha a Jenkins workspace is a ./server-ben van, akkor a forrásfájlokat is át kell másolni.
 COPY ./server/src ./src
-
-# ----------------------------------------------------
-# 4. KÖRNYEZET BEÁLLÍTÁSA
-# A prom-client már a package.json-ben szerepel, nem kell külön telepíteni
-# EXPOSE nem tesz közzé portot, csak dokumentálja, hogy mi fut
 EXPOSE 5000 
 
-# A konténer indító parancsa
 CMD ["node", "dist/index.js"]

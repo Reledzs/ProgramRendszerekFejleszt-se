@@ -1,21 +1,19 @@
-# ProgramRendszerekFejleszt-se
-Beadandó feladat - Autóbérlés szolgáltató platform
+# Felhő és DevOps alapok gyak projekt munka
 
-A Dockerfile MongoDB image-t indít, ami a 27017es Porton fut!
+docker compose up
 
-Adatbázis indítási parancs:
-a dockerfile helyéről kiadni:
-server-mappájában
-docker run -d -p 6000:27017 -v ../database:/data/db --name my-mongo mongo
+Elindulnak docker környezetben a következő alkalmazások:
+mongodb szerver
+nodejs deploy server
+jenkins: user:admin pw:admin
+nginx 
+prometheus http://localhost:9090/
+grafana http://localhost:3000/ Admin admin1
+elasticsearch
+graylog http://localhost:9000/ admin password
 
-Frontend
-A client/src/index.html-t ng serve-el futtatni
 
-Server
-server/index.ts futtatása
+A jenkinsben a CD-pipeline telepíti ki a nodejs deploy serverre magát az alkalmazást.
+Amely a localhoston lesz elérhető.
 
-Admin felhasználó:
-admin@admin.com
-pw: asdasd
-user@user.com
-pw: asdasd
+Bemutató videó: 

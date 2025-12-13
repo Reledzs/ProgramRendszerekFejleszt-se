@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'NodeJS 20'  // Feltételezve, hogy van egy "NodeJS 20" nevű NodeJS telepítés konfigurálva Jenkinsben
+        nodejs 'NodeJS 20'
     }
 
     environment {
@@ -20,13 +20,13 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm ci'  // Használjuk az 'npm ci'-t az 'npm install' helyett a konzisztens telepítés érdekében
+                sh 'npm ci'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
-                sshagent(credentials: ['DEPLOY_SERVER_SSH']) { // sshagent plugin szükséges
+                sshagent(credentials: ['DEPLOY_SERVER_SSH']) { 
                     sh """
                     ssh -o StrictHostKeyChecking=no deploy@${env.DEPLOY_CONTAINER} -p 22 '
                      # 1. Alapállapot
@@ -69,7 +69,6 @@ pipeline {
 
         stage('Cleanup') {
             steps {
-                // Munkaterület tisztítása
                 deleteDir()
             }
         }
@@ -81,7 +80,6 @@ pipeline {
         }
         failure {
             echo 'A pipeline végrehajtása sikertelen volt.'
-            // Itt értesítést küldhetnénk, például e-mailt vagy Slack üzenetet
         }
     }
 }

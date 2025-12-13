@@ -12,32 +12,6 @@ services:
       - mongodb_data:/data/db
     networks:
       - app-net
-  backend:
-    build:
-        context: .
-        dockerfile: ./Dockerfile_node
-    container_name: node-server-env
-    ports:
-      - "5000:5000"
-    environment:
-      - MONGO_URL=mongodb://mongo:27017/my_db
-      - NODE_ENV=production
-    depends_on:
-    - mongo
-    networks:
-      - app-net
-  frontend:
-    build: 
-      context: .
-      dockerfile: ./Dockerfile
-    container_name: angular-env
-    ports:
-      - "4200:4200"
-    depends_on:
-      - backend
-    networks:
-      - app-net
-
   nginx:
     image: nginx:latest
     container_name: nginx-env
@@ -48,8 +22,7 @@ services:
     networks:
       - app-net
     depends_on:
-      - frontend
-      - backend
+      - deploy-server
 
   prometheus:
     image: prom/prometheus
@@ -93,8 +66,49 @@ services:
       - "5000:5000"
     networks:
       - app-net
+  elasticsearch:
+    image: opensearchproject/opensearch:1.3.6 
+    container_name: elasticsearch
+    mem_limit: 2g 
+    environment:
+      - discovery.type=single-node 
+      - "network.host=0.0.0.0" 
+      - "OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m" 
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - "plugins.security.disabled=true"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - elasticsearch_data:/usr/share/opensearch/data
+    networks:
+      - app-net
+  graylog:
+    image: graylog/graylog:4.3
+    container_name: graylog
+    restart: always
+    environment:
+      GRAYLOG_PASSWORD_SECRET: cK7nJ9Xz4vA2bH1yT0qR6sW3lP8oU5mE0kG1iF3dN7jL9wQ2pC4aX5rV6tB8eY0zS1uD2fH4gJ7hK9lM0nO1pQ3rS5tU7vW9xZ0yA2bC4dE6fG8hI0jK2lM3nO5pQ7rS9tU1vW3xZ5yA7bC9dE
+      GRAYLOG_ROOT_PASSWORD_SHA2: 5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8
+      GRAYLOG_ROOT_USERNAME: admin
+      GRAYLOG_HTTP_BIND_ADDRESS: 0.0.0.0:9000
+      GRAYLOG_ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+      GRAYLOG_MONGODB_URI: mongodb://mongo:27017/graylog
+    ports:
+      - "9000:9000"
+      - "12201:12201/udp"
+    volumes:
+      - graylog_data:/usr/share/graylog/data
+    depends_on:
+      - mongo
+      - elasticsearch
+    networks:
+      - app-net
 volumes:
   jenkins_home:
   mongodb_data:
+  elasticsearch_data:
+  graylog_data:
 networks:
   app-net:
