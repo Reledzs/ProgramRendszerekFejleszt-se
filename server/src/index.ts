@@ -77,5 +77,7 @@ app.use('/app/extras', extraRoutes(passport, express.Router()));
 app.listen(port, () => {
     console.log('Server is listening on port ' + port.toString());
 });
-
+app.get('*', (req, res) => {
+    res.sendFile(path.join('../../kliens/dist/src/index.html'));
+});
 console.log('After server is ready.');
