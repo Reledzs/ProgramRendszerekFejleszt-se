@@ -28,7 +28,7 @@ app.get('/metrics', async (req, res) => {
   res.set('Content-Type', client.register.contentType);
   res.end(await client.register.metrics());
 });
-app.use(express.static(path.join(__dirname, '../kliens/dist/frontend-neve')));
+app.use(express.static(path.join(__dirname, '../../kliens/dist/src/index.html')));
 //connecting to db
 mongoose.connect(dbUrl).then((data)=>{
     console.log('Connected to mongoDB');

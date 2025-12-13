@@ -90,6 +90,7 @@ services:
     container_name: deploy-server-env
     ports:
       - "3001:22"
+      - "5000:5000"
     networks:
       - app-net
 volumes:
