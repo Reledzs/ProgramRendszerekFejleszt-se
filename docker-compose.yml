@@ -70,17 +70,19 @@ services:
     networks:
       - app-net
     volumes:
-      - ./grafana/:/etc/grafana/
+      - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+      - ./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
+      - ./grafana/provisioning/dashboards:/var/lib/grafana/dashboards
   jenkins:
-    build: ./jenkins_config  # Itt hivatkozunk az előbb létrehozott mappára!
+    build: ./jenkins_config  
     container_name: jenkins_server
-    user: root # Fontos, hogy hozzáférjen a docker sockethez
+    user: root 
     ports:
-      - "8080:8080"   # Webes felület
-      - "50000:50000" # Agent kommunikáció
+      - "8080:8080"   
+      - "50000:50000" 
     volumes:
-      - ./jenkins_home:/var/jenkins_home        # Hogy ne vesszenek el a jobok újraindításkor
-      - /var/run/docker.sock:/var/run/docker.sock # A "varázslat": így éri el a Jenkins a Dockert
+      - ./jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock 
     networks:
       - app-net
 

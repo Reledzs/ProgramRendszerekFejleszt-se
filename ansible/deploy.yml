@@ -1,0 +1,10 @@
+- name: Deploy Application
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Stop and remove old containers
+      command: docker-compose down
+
+    - name: Start new containers using the Jenkins-built images
+      # Itt már NINCS '--build' kapcsoló!
+      command: docker-compose up -d

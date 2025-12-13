@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Warning: no test specified\" && exit 0",
-    "start": "node dist/index.js",
+    "test": "jest",  
     "build": "tsc"
   },
   "author": "Molnár Kristóf",
