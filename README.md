@@ -13,7 +13,7 @@ elasticsearch
 graylog http://localhost:9000/ admin password
 
 
-A jenkinsben a CD-pipeline telepíti ki a nodejs deploy serverre magát az alkalmazást.
+A jenkinsben a CI-CD-pipeline telepíti ki a nodejs deploy serverre magát az alkalmazást.
 Amely a localhoston lesz elérhető.
 
 Az weboldal felhasználók:

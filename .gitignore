@@ -1,7 +1,7 @@
 
 node_modules/
 npm-debug.log
-
+.angular/
 jenkins_home/
 jenkins_data/
 jenkins_config/jenkins_home/

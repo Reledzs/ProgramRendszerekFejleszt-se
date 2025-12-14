@@ -10,6 +10,7 @@ services:
       - ./mongo-init:/docker-entrypoint-initdb.d:ro
       - ./server/database/:/data/db:ro
       - mongodb_data:/data/db
+      - os_data:/usr/share/opensearch/data
     networks:
       - app-net
   nginx:
@@ -102,6 +103,7 @@ services:
       - "12201:12201/udp"
     volumes:
       - graylog_data:/usr/share/graylog/data
+      - ./setup_graylog.sh:/setup_graylog.sh
     depends_on:
       - mongo
       - elasticsearch
@@ -112,5 +114,6 @@ volumes:
   mongodb_data:
   elasticsearch_data:
   graylog_data:
+  os_data:
 networks:
   app-net:
