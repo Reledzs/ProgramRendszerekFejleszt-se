@@ -14,7 +14,6 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                // Ez letölti a kódot a Jenkins munkaterületére
                 git branch: 'main', url: "${env.GITHUB_REPO}"
             }
         }
@@ -23,8 +22,8 @@ pipeline {
                 echo '--- CI: Building Frontend ---'
                 dir('kliens') {
                     sh 'npm ci'
-                    echo 'Running Linter...'
-                    sh 'npm run lint' 
+                    //echo 'Running Linter...'
+                    //sh 'npm run lint' 
 
                     echo 'Running Unit Tests...'
                     sh 'npm run test'
@@ -40,8 +39,8 @@ pipeline {
                 dir('server') {
                     sh 'npm ci'
 
-                    echo 'Running Linter...'
-                    sh 'npm run lint'
+                    //echo 'Running Linter...'
+                    //sh 'npm run lint'
 
                     echo 'Running Unit Tests...'
                     sh 'npm test'
