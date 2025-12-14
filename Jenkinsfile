@@ -29,40 +29,23 @@ pipeline {
                 sshagent(credentials: ['DEPLOY_SERVER_SSH']) { 
                     sh """
                     ssh -o StrictHostKeyChecking=no deploy@${env.DEPLOY_CONTAINER} -p 22 '
-                     # 1. Alapállapot
                     cd /app
                     # (Vigyázz az rm -rf *-al, nehogy konfigurációs fájlokat törölj, ha vannak!)
                     rm -rf ProgramRendszerekFejleszt-se 
-            
-                    # 2. Friss kód letöltése
                     git clone https://github.com/Reledzs/ProgramRendszerekFejleszt-se.git
                     cd /app/ProgramRendszerekFejleszt-se
                     git checkout origin/main
-
-                    # -----------------------------------------------------
-                    # 3. ANGULAR FRONTEND BUILD (ÚJ RÉSZ)
-                    # -----------------------------------------------------
                     echo "Building Frontend..."
                     cd kliens  # Vagy ami a frontend mappád neve (pl. frontend)
                     npm ci     # Frontend függőségek telepítése
                     npm run build # Angular build (létrehozza a dist mappát)
-            
-                    # Visszalépés a főkönyvtárba vagy a szerver mappába
                     cd .. 
-
-                    # -----------------------------------------------------
-                    # 4. BACKEND BUILD ÉS INDÍTÁS
-                    # -----------------------------------------------------
                     echo "Building and Starting Backend..."
                     cd server
                     npm ci
                     pm run build
-            
-                    # PM2 újraindítás (vagy start, ha még nem fut)
-                    # A --update-env fontos, ha változtak a környezeti változók
                     pm2 restart node-server --update-env || pm2 start dist/index.js --name "node-server"
-        '
-    """
+                """
                 }
             }
         }
